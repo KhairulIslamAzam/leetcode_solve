@@ -6,23 +6,34 @@ public class LeetCode49 {
         groupAnagrams(strs);
     }
 
+//    public static List<List<String>> groupAnagrams(String[] strs) {
+//        Map<String, List<String>> ang = new HashMap<>();
+//        for (int i = 0; i < strs.length; i++) {
+//            char[] chr = strs[i].toCharArray();
+//            Arrays.sort(chr);
+//            String st = String.valueOf(chr);
+//            if (ang.containsKey(st)) {
+//                List<String> value = ang.get(st);
+//                value.add(strs[i]);
+//                ang.put(st, value);
+//            } else {
+//                List<String> value = new ArrayList<>();
+//                value.add(strs[i]);
+//                ang.put(st, value);
+//
+//            }
+//
+//        }
+//        return ang.values().stream().toList();
+//    }
+
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> ang = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {
             char[] chr = strs[i].toCharArray();
             Arrays.sort(chr);
             String st = String.valueOf(chr);
-            if (ang.containsKey(st)) {
-                List<String> value = ang.get(st);
-                value.add(strs[i]);
-                ang.put(st, value);
-            } else {
-                List<String> value = new ArrayList<>();
-                value.add(strs[i]);
-                ang.put(st, value);
-
-            }
-
+            ang.computeIfAbsent(st, k -> new ArrayList<>()).add(strs[i]);
         }
         return ang.values().stream().toList();
     }
