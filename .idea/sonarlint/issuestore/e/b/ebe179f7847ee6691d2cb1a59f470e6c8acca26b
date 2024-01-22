@@ -1,13 +1,0 @@
-
-7
-java:S1220""Move this file to a named package.8Š’Õ”Ñ1
-G	java:S106	"+Replace this use of System.out by a logger.(•‘ğ8”’Õ”Ñ1
-X	java:S125"<This block of commented-out lines of code should be removed.(ó›¹Œ8•’Õ”Ñ1
-]	java:S125"<This block of commented-out lines of code should be removed.(ßá’¾ıÿÿÿÿ8•’Õ”Ñ1
-]	java:S125#"<This block of commented-out lines of code should be removed.(ßá’¾ıÿÿÿÿ8–’Õ”Ñ1
-^
-java:S11260"AReplace this if-then-else statement by a single return statement.(ŸÕ—8—’Õ”Ñ1
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜’Õ”Ñ1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8™’Õ”Ñ1
